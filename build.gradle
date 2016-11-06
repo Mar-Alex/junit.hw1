@@ -7,3 +7,9 @@ apply from: 'https://raw.githubusercontent.com/ChangeRequest/gradle_common/maste
 apply from: 'https://raw.githubusercontent.com/ChangeRequest/gradle_common/master/testModule.gradle'
 apply from: 'https://raw.githubusercontent.com/ChangeRequest/gradle_common/master/idea.gradle'
 apply from: 'https://raw.githubusercontent.com/ChangeRequest/gradle_common/master/eclipse.gradle'
+
+dependencies {
+    compile commonDependencies.lombok
+    compile commonDependencies.commons_lang
+    testCompile commonDependencies.mockito
+}
