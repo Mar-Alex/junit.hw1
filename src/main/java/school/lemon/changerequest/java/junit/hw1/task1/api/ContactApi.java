@@ -1,7 +1,7 @@
-package school.lemon.changerequest.java.junit.hw1.api;
+package school.lemon.changerequest.java.junit.hw1.task1.api;
 
-import school.lemon.changerequest.java.junit.hw1.model.CallNumber;
-import school.lemon.changerequest.java.junit.hw1.model.Contact;
+import school.lemon.changerequest.java.junit.hw1.task1.model.CallNumber;
+import school.lemon.changerequest.java.junit.hw1.task1.model.Contact;
 
 import java.util.List;
 

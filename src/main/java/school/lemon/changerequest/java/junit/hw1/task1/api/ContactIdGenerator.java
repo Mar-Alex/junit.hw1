@@ -1,4 +1,4 @@
-package school.lemon.changerequest.java.junit.hw1.api;
+package school.lemon.changerequest.java.junit.hw1.task1.api;
 
 /**
  * Generator of Contacts IDs

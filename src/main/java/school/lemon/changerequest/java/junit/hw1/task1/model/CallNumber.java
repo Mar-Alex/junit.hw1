@@ -1,4 +1,4 @@
-package school.lemon.changerequest.java.junit.hw1.model;
+package school.lemon.changerequest.java.junit.hw1.task1.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

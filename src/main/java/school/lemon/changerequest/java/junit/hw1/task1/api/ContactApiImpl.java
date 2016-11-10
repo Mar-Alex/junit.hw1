@@ -1,7 +1,7 @@
-package school.lemon.changerequest.java.junit.hw1.api;
+package school.lemon.changerequest.java.junit.hw1.task1.api;
 
-import school.lemon.changerequest.java.junit.hw1.model.CallNumber;
-import school.lemon.changerequest.java.junit.hw1.model.Contact;
+import school.lemon.changerequest.java.junit.hw1.task1.model.CallNumber;
+import school.lemon.changerequest.java.junit.hw1.task1.model.Contact;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Map;
 
 import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
-import static school.lemon.changerequest.java.junit.hw1.api.ContactNotFoundException.NO_CONTACT_FOR_CALL_NUMBER;
-import static school.lemon.changerequest.java.junit.hw1.api.ContactNotFoundException.NO_CONTACT_WITH_ID;
+import static school.lemon.changerequest.java.junit.hw1.task1.api.ContactNotFoundException.NO_CONTACT_FOR_CALL_NUMBER;
+import static school.lemon.changerequest.java.junit.hw1.task1.api.ContactNotFoundException.NO_CONTACT_WITH_ID;
 
 public class ContactApiImpl implements ContactApi {
     private final Map<Long, Contact> contacts = new LinkedHashMap<>();

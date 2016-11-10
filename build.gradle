@@ -12,4 +12,5 @@ dependencies {
     compile commonDependencies.lombok
     compile commonDependencies.commons_lang
     testCompile commonDependencies.mockito
+    testCompile commonDependencies.system_rules_junit
 }
