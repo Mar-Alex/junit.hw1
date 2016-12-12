@@ -93,12 +93,17 @@ public class ContactApiImpl implements ContactApi {
 
     @Override
     public Contact[] getAll() {
-        return Arrays.copyOf(contacts, contacts.length);
+        return Arrays.copyOf(contacts, size);
+    }
+
+    @Override
+    public int filledContactsAmount() {
+        return size;
     }
 
     private void notNull(Object o) {
         if (o == null) {
-            throw new IllegalArgumentException();
+            throw new NullPointerException();
         }
     }
 }

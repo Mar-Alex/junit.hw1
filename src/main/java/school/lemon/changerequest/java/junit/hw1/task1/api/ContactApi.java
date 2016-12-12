@@ -52,5 +52,17 @@ public interface ContactApi {
      */
     Contact create(Contact contact);
 
+    /**
+     * Returns all filled contacts array
+     *
+     * @return Contact array
+     */
     Contact[] getAll();
+
+    /**
+     * Return amount of filled contacts
+     *
+     * @return amount of filled contacts
+     */
+    int filledContactsAmount();
 }
