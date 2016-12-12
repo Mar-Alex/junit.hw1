@@ -3,12 +3,12 @@ package school.lemon.changerequest.java.junit.hw1.task1.api;
 import school.lemon.changerequest.java.junit.hw1.task1.model.CallNumber;
 import school.lemon.changerequest.java.junit.hw1.task1.model.Contact;
 
-import java.util.List;
-
 /**
  * Some API to
  */
 public interface ContactApi {
+    int CONTACT_API_ARRAY_SIZE = 1000;
+
     /**
      * Search contact by call number
      *
@@ -52,5 +52,5 @@ public interface ContactApi {
      */
     Contact create(Contact contact);
 
-    List<Contact> getAll();
+    Contact[] getAll();
 }
