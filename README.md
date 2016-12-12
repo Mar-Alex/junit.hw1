@@ -1,5 +1,7 @@
 jUnit. Home work 1
 ===============
+
+[![Join the chat at https://gitter.im/changerequest/junit.hw1](https://badges.gitter.im/changerequest/junit.hw1.svg)](https://gitter.im/changerequest/junit.hw1?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 1\. Create unit tests
 ---------------
 Create unit tests for ContactApi, ContactIdGenerator.
