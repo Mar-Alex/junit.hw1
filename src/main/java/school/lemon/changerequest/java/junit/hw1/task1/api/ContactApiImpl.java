@@ -31,9 +31,9 @@ public class ContactApiImpl implements ContactApi {
     @Override
     public Contact find(CallNumber callNumber) throws ContactNotFoundException {
         notNull(callNumber);
-        for (Contact contact : contacts) {
-            if (callNumber.equals(contact.getCallNumber())) {
-                return contact;
+        for (int i = 0; i < size; i++) {
+            if (callNumber.equals(contacts[i].getCallNumber())) {
+                return contacts[i];
             }
         }
         throw new ContactNotFoundException(String.format("Contact with callNumber=%s wasn't found", callNumber),
