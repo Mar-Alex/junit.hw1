@@ -44,87 +44,61 @@ public class ConsoleCalculatorTest {
     @Test
     public void testAddition() {
         // given
-        systemInMock.provideLines("add", "1", "2",
-                "add", "-3", "4",
-                "add", "5", "-6",
-                "add", "-7", "-8", "exit");
+        systemInMock.provideLines("add", "1", "2", "exit");
         // when
         ConsoleCalculator.main(new String[]{});
         // then
-        Mockito.verify(out, Mockito.times(4)).println("Enter first number:");
-        Mockito.verify(out, Mockito.times(4)).println("Enter second number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter first number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter second number:");
         Mockito.verify(out, Mockito.times(1)).println("Result of 1+2 is 3");
-        Mockito.verify(out, Mockito.times(1)).println("Result of -3+4 is 1");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 5+-6 is -1");
-        Mockito.verify(out, Mockito.times(1)).println("Result of -7+-8 is -15");
     }
 
     @Test
     public void testSubtraction() {
         // given
-        systemInMock.provideLines("sub", "1", "2",
-                "sub", "-3", "4",
-                "sub", "5", "-6",
-                "sub", "-7", "-8", "exit");
+        systemInMock.provideLines("sub", "1", "2", "exit");
         // when
         ConsoleCalculator.main(new String[]{});
         // then
-        Mockito.verify(out, Mockito.times(4)).println("Enter first number:");
-        Mockito.verify(out, Mockito.times(4)).println("Enter second number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter first number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter second number:");
         Mockito.verify(out, Mockito.times(1)).println("Result of 1-2 is -1");
-        Mockito.verify(out, Mockito.times(1)).println("Result of -3-4 is -7");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 5--6 is 11");
-        Mockito.verify(out, Mockito.times(1)).println("Result of -7--8 is 1");
     }
 
     @Test
     public void testMultiplying() {
         // given
-        systemInMock.provideLines("mul", "1", "2",
-                "mul", "-3", "4",
-                "mul", "5", "-6",
-                "mul", "-7", "-8", "exit");
+        systemInMock.provideLines("mul", "-3", "4", "exit");
         // when
         ConsoleCalculator.main(new String[]{});
         // then
-        Mockito.verify(out, Mockito.times(4)).println("Enter first number:");
-        Mockito.verify(out, Mockito.times(4)).println("Enter second number:");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 1*2 is 2");
+        Mockito.verify(out, Mockito.times(1)).println("Enter first number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter second number:");
         Mockito.verify(out, Mockito.times(1)).println("Result of -3*4 is -12");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 5*-6 is -30");
-        Mockito.verify(out, Mockito.times(1)).println("Result of -7*-8 is 56");
     }
 
     @Test
     public void testDividing() {
         // given
-        systemInMock.provideLines("div", "2", "1",
-                "div", "-5", "2",
-                "div", "5", "-3",
-                "div", "-6", "-2", "exit");
+        systemInMock.provideLines("div", "-5", "2", "exit");
         // when
         ConsoleCalculator.main(new String[]{});
         // then
-        Mockito.verify(out, Mockito.times(4)).println("Enter first number:");
-        Mockito.verify(out, Mockito.times(4)).println("Enter second number:");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 2/1 is 2");
+        Mockito.verify(out, Mockito.times(1)).println("Enter first number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter second number:");
         Mockito.verify(out, Mockito.times(1)).println("Result of -5/2 is -2");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 5/-3 is -1");
-        Mockito.verify(out, Mockito.times(1)).println("Result of -6/-2 is 3");
     }
 
     @Test
     public void testDividingZero() {
         // given
-        systemInMock.provideLines("div", "0", "2",
-                "div", "0", "-3", "exit");
+        systemInMock.provideLines("div", "0", "2", "exit");
         // when
         ConsoleCalculator.main(new String[]{});
         // then
-        Mockito.verify(out, Mockito.times(2)).println("Enter first number:");
-        Mockito.verify(out, Mockito.times(2)).println("Enter second number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter first number:");
+        Mockito.verify(out, Mockito.times(1)).println("Enter second number:");
         Mockito.verify(out, Mockito.times(1)).println("Result of 0/2 is 0");
-        Mockito.verify(out, Mockito.times(1)).println("Result of 0/-3 is 0");
     }
 
     @Test(expected = ArithmeticException.class)

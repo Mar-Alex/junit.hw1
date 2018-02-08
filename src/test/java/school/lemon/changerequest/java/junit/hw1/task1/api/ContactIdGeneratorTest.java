@@ -19,7 +19,6 @@ public class ContactIdGeneratorTest {
         assertEquals(generator.generate(), new ContactIdGeneratorImpl().generate());
     }
 
-
     @Test
     public void stepOfGenerationTest() {
         Long first = generator.generate();
@@ -35,7 +34,7 @@ public class ContactIdGeneratorTest {
             for (int i = 0; i < interval - 1; i++)
                 generator.generate();
         } catch (IllegalStateException e) {
-            throw new Exception("Exception was thrown before achieving maximum ID");
+            fail();
         }
         generator.generate();
     }
